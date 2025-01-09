@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            /* background-color: red; */
+            height: 100vh;
+            width: 100%;
+        }
+
+        header {
+            background-color: green;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            /* background-color: blue; */
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            font-size: 20px;
+        }
+
+        section{
+            height: 100vh;
+            /* background-color: cyan; */
+        }
+
+        .about-section{
+            display: flex;
+            gap: 40px;
+            /* font size: 30px; */
+        }
+
+        .about-container{
+            /* flex-grow: 1; */
+            width: 50%;
+
+        }
+        .mission-container{
+            /* flex-grow: 1; */
+            width: 50%;
+        }
+
+        .about-section p{
+            font-size: 30px;
+            text-align: justify;
+        }
+
+        .about-section h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Home</h1>
+    </section>
+
+    <section class="about-section">
+        <div class="about-container">
+            <h1>About</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem illo, cumque dicta officiis veniam sequi, commodi nisi recusandae molestias natus consectetur ducimus quae. Repudiandae cum commodi suscipit voluptate earum facilis!</p>
+        </div>
+
+        <div class="mission-container">
+            <h1>Mission</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem illo, cumque dicta officiis veniam sequi, commodi nisi recusandae molestias natus consectetur ducimus quae. Repudiandae cum commodi suscipit voluptate earum facilis!</p>
+        </div>
+    </section>
+
+    <section>
+        <h1>Contact</h1>
+    </section>
+</body>
+
+</html>
