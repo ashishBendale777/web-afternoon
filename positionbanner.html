@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .overlay {
+            height: 80%;
+            width: 80%;
+            display: flex;
+            top: 10%;
+            /* top: 20px; */
+            left: 10%;
+            /* left: -20px; */
+            border: 3px solid blue;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10PX;
+            /* background-color: red; */
+            background-color: rgba(149, 89, 89, 0.7);
+            position: absolute;
+        }
+
+        .overlay button{
+            height: 30PX;
+            padding:  5px 5px;
+            background-color: green;
+            /* padding: 10PX; */
+            border: 3px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./images/c.png" alt="banner">
+    <div class="overlay">
+        <h1>My Web Site</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <button>Get Started</button>
+    </div>
+</body>
+
+</html>
