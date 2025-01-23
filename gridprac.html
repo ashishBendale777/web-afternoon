@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: auto 300px 4fr 1fr;
+            grid-template-rows: 1fr 100px auto;
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .g-item {
+            display: flex;
+            background-color: green;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="g-item">
+            <h1>1</h1>
+        </div>
+
+        <div class="g-item">
+            <h1>2</h1>
+        </div>
+
+        <div class="g-item">
+            <h1>3</h1>
+        </div>
+
+
+        <div class="g-item">
+            <h1>4</h1>
+        </div>
+
+        <div class="g-item">
+            <h1>5</h1>
+        </div>
+
+        <div class="g-item">
+            <h1>6</h1>
+        </div>
+
+        <div class="g-item">
+            <h1>7</h1>
+        </div>
+        <div class="g-item">
+            <h1>8</h1>
+        </div>
+        <div class="g-item">
+            <h1>9</h1>
+        </div>
+        <div class="g-item">
+            <h1>10</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
