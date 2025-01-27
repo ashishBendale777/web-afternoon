@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            background-color: black;
+        }
+
+        header{
+            z-index: 3;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            position: sticky;
+        }
+
+        header p{
+            color: white;
+            font-weight: 900;
+            font-size: 20px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 100px;
+        }
+        header ul{
+            
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            color: white;
+            align-items: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-left: auto;
+            justify-content: space-evenly;
+            font-weight: 800;
+            font-size: 1rem;
+            background-color: red;
+        }
+
+        .left-block{
+            background-color: red;
+            height: 100%;
+            width: 25%;
+            position: absolute;
+        }
+        .left-block img{
+            height: 70%;
+            position: absolute;
+            right: 0;
+            border: 4px solid white;
+            border-radius: 10px;
+            transform: translate(50%,25g%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>YANYA</p>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li>Contact</li>
+            <li>Team</li>
+            <li>Project</li>
+        </ul>
+    </header>
+    <div class="left-block">
+        <img src="./images/girl.jpg" alt="">
+    </div>
+</body>
+</html>
