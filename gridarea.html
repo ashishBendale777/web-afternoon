@@ -69,6 +69,25 @@
             grid-area: c3;
             background-color: azure;
         }
+
+        @media (orientation: portrait) {
+            body {
+                background-color: blue;
+            }
+
+            .main-container {
+                grid-template-rows: 60px 60px 1fr 1fr 60px;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    "header header"
+                    "aside aside"
+                    "c1 c1"
+                    "c2 c3"
+                    "footer footer";
+
+
+            }
+        }
     </style>
 </head>
 
