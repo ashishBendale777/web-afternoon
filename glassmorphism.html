@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .glass-morph-container {
+            position: absolute;
+            z-index: 3;
+            height: 50%;
+            width: 30%;
+            top: 25%;
+            left: 30%;
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(30.3px);
+            -webkit-backdrop-filter: blur(30.3px);
+            border: 1px solid rgba(255, 255, 255, 0.32);
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="./images/pexels-lum3n-44775-167698 (1).jpg" alt="">
+
+    <div class="glass-morph-container">
+
+    </div>
+</body>
+
+</html>
