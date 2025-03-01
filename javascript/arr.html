@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let a = 43 //int Number
+        let fName = "Ashish" //Sting
+        let height = 5.7
+
+        let friends = ["Ashish", "Sam", "Amol"]
+        let ages = [43, 65, 34, 54, 76, 76]
+
+        console.log(friends.length);
+        console.log(ages.length);
+        console.log(friends[6]); //access elements from array
+        console.log(ages[1]);
+        console.log(friends[friends.length - 1]);
+        console.log(ages[ages.length - 1]);
+
+
+        // for (let index = 0; index < friends.length; index++) {
+        //     console.log(friends[index]);
+        // }
+
+        let x = 0
+        // do {
+        //     console.log(ages[x]);
+        //     x++
+        // } while (x < ages.length);
+
+
+
+        while (ages[x] != undefined) {
+            console.log(ages[x]);
+            x++
+        }
+    </script>
+</body>
+
+</html>
