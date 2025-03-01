@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let a = 43
+        let city = "Jalgaon"
+        let names = []
+
+
+        //creat an object
+        let student = {
+            fName: "Ashish",
+            lName: "Bendale",
+            course: "NCA",
+            marks: 76,
+            rollNo: 3
+        }
+
+        console.log(student)
+
+        //accessong value from obj
+        console.log(student.fName);
+        console.log(student["course"]);
+
+        //assign new value to roll no
+        student.rollNo = 5
+        console.log(student.rollNo);
+
+        //adding new key/property
+        student.city = "Jalgaon"
+        console.log(student);
+
+
+        //array of an object
+        const employees = [
+            { name: 'Amit Kumar', salary: 50000, designation: 'Software Engineer', department: 'IT' },
+            { name: 'Priya Sharma', salary: 45000, designation: 'HR Manager', department: 'HR' },
+            { name: 'Rahul Verma', salary: 60000, designation: 'Project Manager', department: 'Management' },
+            { name: 'Neha Gupta', salary: 55000, designation: 'Data Analyst', department: 'IT' },
+            { name: 'Ravi Patel', salary: 48000, designation: 'Accountant', department: 'Finance' },
+            { name: 'Sneha Reddy', salary: 40000, designation: 'Marketing Executive', department: 'Marketing' },
+            { name: 'Manoj Yadav', salary: 53000, designation: 'Software Engineer', department: 'IT' },
+            { name: 'Shreya Singh', salary: 47000, designation: 'Content Writer', department: 'Marketing' },
+            { name: 'Karan Joshi', salary: 52000, designation: 'Business Analyst', department: 'Management' },
+            { name: 'Sita Sharma', salary: 46000, designation: 'HR Executive', department: 'HR' },
+            { name: 'Amitabh Desai', salary: 62000, designation: 'Senior Developer', department: 'IT' },
+            { name: 'Rita Patel', salary: 49000, designation: 'Sales Manager', department: 'Sales' },
+            { name: 'Suresh Kumar', salary: 57000, designation: 'Project Manager', department: 'Management' },
+            { name: 'Alok Mishra', salary: 45000, designation: 'Admin Executive', department: 'Administration' },
+            { name: 'Pooja Mehta', salary: 51000, designation: 'Data Scientist', department: 'IT' },
+            { name: 'Ravi Kumar', salary: 43000, designation: 'Sales Executive', department: 'Sales' },
+            { name: 'Tanvi Gupta', salary: 55000, designation: 'Marketing Manager', department: 'Marketing' },
+            { name: 'Vikram Singh', salary: 60000, designation: 'Software Architect', department: 'IT' },
+            { name: 'Suman Rani', salary: 46000, designation: 'HR Manager', department: 'HR' },
+            { name: 'Deepak Yadav', salary: 48000, designation: 'Customer Support', department: 'Customer Service' },
+            { name: 'Aditi Mehra', salary: 53000, designation: 'Business Analyst', department: 'Management' },
+            { name: 'Rohit Pandey', salary: 50000, designation: 'Sales Executive', department: 'Sales' },
+            { name: 'Geeta Devi', salary: 47000, designation: 'Content Manager', department: 'Marketing' },
+            { name: 'Shivani Kumar', salary: 55000, designation: 'Project Coordinator', department: 'Management' },
+            { name: 'Kunal Sharma', salary: 52000, designation: 'Software Engineer', department: 'IT' },
+            { name: 'Rajesh Gupta', salary: 60000, designation: 'Senior HR Manager', department: 'HR' },
+            { name: 'Simran Kaur', salary: 48000, designation: 'Product Manager', department: 'Product' },
+            { name: 'Vikas Singh', salary: 47000, designation: 'UX Designer', department: 'Design' },
+            { name: 'Neeraj Reddy', salary: 50000, designation: 'Software Engineer', department: 'IT' },
+            { name: 'Swati Mehta', salary: 45000, designation: 'Finance Manager', department: 'Finance' },
+            { name: 'Ravi Bhardwaj', salary: 52000, designation: 'QA Engineer', department: 'IT' },
+            { name: 'Simran Kaur', salary: 48000, designation: 'Product Manager', department: 'Product' },
+            { name: 'Ishaan Sharma', salary: 50000, designation: 'Marketing Executive', department: 'Marketing' },
+            { name: 'Nikita Chauhan', salary: 52000, designation: 'HR Executive', department: 'HR' }
+        ];
+
+        console.log(employees.length);
+
+        for (let employee of employees) {
+            if (employee.salary >= 50000) {
+                console.log(employee.name, employee.salary);
+            }
+        }
+    </script>
+</body>
+
+</html>
