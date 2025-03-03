@@ -10,36 +10,25 @@
 <body>
 
     <script>
-        let a = 43
-        let city = "Jalgaon"
-        let names = []
+        //array manipulation functions
+        let names = ["Ashish"]
+
+        console.log(names);
+
+        names.push("Sam")
+        names.push("Pawan")
+        names.push("Sarv")
 
 
-        //creat an object
-        let student = {
-            fName: "Ashish",
-            lName: "Bendale",
-            course: "NCA",
-            marks: 76,
-            rollNo: 3
-        }
+        names.unshift("Bhav")
+        names.unshift("Gaurav")
+        console.log(names);
 
-        console.log(student)
-
-        //accessong value from obj
-        console.log(student.fName);
-        console.log(student["course"]);
-
-        //assign new value to roll no
-        student.rollNo = 5
-        console.log(student.rollNo);
-
-        //adding new key/property
-        student.city = "Jalgaon"
-        console.log(student);
+        names.pop()
+        names.shift()
+        console.log(names);
 
 
-        //array of an object
         const employees = [
             { name: 'Amit Kumar', salary: 50000, designation: 'Software Engineer', department: 'IT' },
             { name: 'Priya Sharma', salary: 45000, designation: 'HR Manager', department: 'HR' },
@@ -77,19 +66,17 @@
             { name: 'Nikita Chauhan', salary: 52000, designation: 'HR Executive', department: 'HR' }
         ];
 
-        console.log(employees.length);
+        let itEmployees = employees.filter((emp) => emp.department == "IT")
+        console.table(itEmployees);
 
-        // for (let employee of employees) {
-        //     if (employee.salary >= 50000) {
-        //         console.log(employee.name, employee.salary);
-        //     }
-        // }
+        let empl = employees.find((emp) => emp.name == "Simran Kaurr")
+        console.log(empl);
 
-        for (let index = 0; index < employees.length; index++) {
-            console.log(employees[index]);
-            console.log(employees[index].department);
-        }
+        let res = employees.every((emp) => emp.department == "IT")
+        console.log(res);
 
+        let res2 = employees.some((emp) => emp.department == "Acc")
+        console.log(res2);
 
     </script>
 </body>
