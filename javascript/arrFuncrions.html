@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const employees = [
+            { name: 'Amit Kumar', salary: 50000, designation: 'Software Engineer', department: 'IT' },
+            { name: 'Priya Sharma', salary: 45000, designation: 'HR Manager', department: 'HR' },
+            { name: 'Rahul Verma', salary: 60000, designation: 'Project Manager', department: 'Management' },
+            { name: 'Neha Gupta', salary: 55000, designation: 'Data Analyst', department: 'IT' },
+            { name: 'Ravi Patel', salary: 48000, designation: 'Accountant', department: 'Finance' },
+            { name: 'Sneha Reddy', salary: 40000, designation: 'Marketing Executive', department: 'Marketing' },
+            { name: 'Manoj Yadav', salary: 53000, designation: 'Software Engineer', department: 'IT' },
+            { name: 'Shreya Singh', salary: 47000, designation: 'Content Writer', department: 'Marketing' },
+        ]
+
+        const newEmpl = [
+            { name: 'Pooja Mehta', salary: 51000, designation: 'Data Scientist', department: 'IT' },
+            { name: 'Ravi Kumar', salary: 43000, designation: 'Sales Executive', department: 'Sales' },
+            { name: 'Tanvi Gupta', salary: 55000, designation: 'Marketing Manager', department: 'Marketing' },
+            { name: 'Vikram Singh', salary: 60000, designation: 'Software Architect', department: 'IT' },
+            { name: 'Suman Rani', salary: 46000, designation: 'HR Manager', department: 'HR' },
+            { name: 'Deepak Yadav', salary: 48000, designation: 'Customer Support', department: 'Customer Service' },
+            { name: 'Aditi Mehra', salary: 53000, designation: 'Business Analyst', department: 'Management' },
+        ]
+
+
+        let allemps = employees.concat(newEmpl)
+        console.log(employees.length);
+        console.table(allemps);
+
+
+        let fNames = ["Ravi", "Sam", "Ashu"]
+        console.log(fNames.join(" "));
+
+
+        const users = [
+            { name: "Aarav Sharma", email: "aarav.sharma@example.com", age: 12, city: "Mumbai", state: "Maharashtra" },
+            { name: "Saanvi Verma", email: "saanvi.verma@example.com", age: 14, city: "Delhi", state: "Delhi" },
+            { name: "Vivaan Iyer", email: "vivaan.iyer@example.com", age: 16, city: "Chennai", state: "Tamil Nadu" },
+            { name: "Anaya Reddy", email: "anaya.reddy@example.com", age: 18, city: "Hyderabad", state: "Telangana" },
+            { name: "Kabir Mehta", email: "kabir.mehta@example.com", age: 20, city: "Ahmedabad", state: "Gujarat" },
+            { name: "Ishaan Khanna", email: "ishaan.khanna@example.com", age: 22, city: "Kolkata", state: "West Bengal" },
+            { name: "Riya Das", email: "riya.das@example.com", age: 24, city: "Bhubaneswar", state: "Odisha" },
+            { name: "Ayaan Patil", email: "ayaan.patil@example.com", age: 26, city: "Pune", state: "Maharashtra" },
+            { name: "Mira Joshi", email: "mira.joshi@example.com", age: 28, city: "Jaipur", state: "Rajasthan" },
+            { name: "Dev Malik", email: "dev.malik@example.com", age: 30, city: "Chandigarh", state: "Punjab" },
+            { name: "Tanishq Nair", email: "tanishq.nair@example.com", age: 11, city: "Thiruvananthapuram", state: "Kerala" },
+            { name: "Zara Gupta", email: "zara.gupta@example.com", age: 13, city: "Lucknow", state: "Uttar Pradesh" },
+            { name: "Kunal Roy", email: "kunal.roy@example.com", age: 15, city: "Patna", state: "Bihar" },
+            { name: "Esha Sinha", email: "esha.sinha@example.com", age: 17, city: "Indore", state: "Madhya Pradesh" },
+            { name: "Rudra Aggarwal", email: "rudra.aggarwal@example.com", age: 19, city: "Ludhiana", state: "Punjab" },
+            { name: "Aditi Pillai", email: "aditi.pillai@example.com", age: 21, city: "Bangalore", state: "Karnataka" },
+            { name: "Harsh Jaiswal", email: "harsh.jaiswal@example.com", age: 23, city: "Nagpur", state: "Maharashtra" },
+            { name: "Meher Singh", email: "meher.singh@example.com", age: 25, city: "Dehradun", state: "Uttarakhand" },
+            { name: "Nikhil Thakur", email: "nikhil.thakur@example.com", age: 27, city: "Shimla", state: "Himachal Pradesh" },
+            { name: "Sneha Chatterjee", email: "sneha.chatterjee@example.com", age: 29, city: "Guwahati", state: "Assam" }
+        ];
+
+        // users.forEach((usr) => {
+        //     if (usr.age >= 18) {
+        //         usr.isAdult = true
+        //     } else {
+        //         usr.isAdult = false
+        //     }
+        // })
+
+        users.map((usr) => {
+            if (usr.age >= 18) {
+                usr.isAdeult = true
+            } else {
+                usr.isAdeult = false
+            }
+        })
+        console.table(users);
+
+    </script>
+</body>
+
+</html>
