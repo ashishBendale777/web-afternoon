@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //String manipulation functions
+        let sentence = "I am a Boy"
+    
+        console.log(sentence.toUpperCase());
+        console.log(sentence.toLowerCase());
+
+        console.log("Char At",sentence.charAt(2));
+        console.log("Index Of",sentence.indexOf('a'));
+        console.log("Last Index",sentence.lastIndexOf('a'));
+        
+        
+        console.log("Starts with",sentence.startsWith('I'));
+        console.log("Ends with",sentence.endsWith('k'));
+
+        console.log("Includes",sentence.includes('am'));
+        
+        console.log("Concat",sentence.concat('and indianm'));
+        
+        let words = sentence.split(" ")
+        console.log(words);
+
+        let resSlice = sentence.slice(2,7)
+        console.log(resSlice);
+
+        console.log(sentence.length);
+
+
+
+    </script>
+</body>
+
+</html>
