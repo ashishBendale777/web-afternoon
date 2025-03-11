@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //function  calling
+        addition(12, 54)
+
+        //Javascript functions defination and calling
+        let a = 43
+        let b = 65
+        let ans = a + b
+
+
+
+        //define a function
+        function addition(x, y) {
+            //function body
+            let ans = x + y
+            console.log(ans);
+        }
+
+
+
+
+        //define arrow function
+        let as = 43
+        let name = "asd"
+        let friends = []
+        let stud = {}
+
+        let multiply = (a, b) => {
+            //function body
+            let ans = a * b
+            console.log("Multiply", ans);
+            return ans
+        }
+
+        multiply(4, 65)
+
+
+        function createGreetingMessage(friendName) {
+            return "Hi..." + friendName
+        }
+
+        let msg = createGreetingMessage("Isha")
+        console.log(msg);
+    </script>
+</body>
+
+</html>

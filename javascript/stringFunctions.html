@@ -12,33 +12,49 @@
     <script>
         //String manipulation functions
         let sentence = "I am a Boy"
-    
+
         console.log(sentence.toUpperCase());
         console.log(sentence.toLowerCase());
 
-        console.log("Char At",sentence.charAt(2));
-        console.log("Index Of",sentence.indexOf('a'));
-        console.log("Last Index",sentence.lastIndexOf('a'));
-        
-        
-        console.log("Starts with",sentence.startsWith('I'));
-        console.log("Ends with",sentence.endsWith('k'));
+        console.log("Char At", sentence.charAt(2));
+        console.log("Index Of", sentence.indexOf('a'));
+        console.log("Last Index", sentence.lastIndexOf('a'));
 
-        console.log("Includes",sentence.includes('am'));
-        
-        console.log("Concat",sentence.concat('and indianm'));
-        
+
+        console.log("Starts with", sentence.startsWith('I'));
+        console.log("Ends with", sentence.endsWith('k'));
+
+        console.log("Includes", sentence.includes('am'));
+
+        console.log("Concat", sentence.concat('and indianm'));
+
         let words = sentence.split(" ")
         console.log(words);
 
-        let resSlice = sentence.slice(2,7)
+        let resSlice = sentence.slice(2, 7)
         console.log(resSlice);
 
         console.log(sentence.length);
 
-        console.log(sentence.replace("Boy","Girl"));
+        console.log(sentence.replace("Boy", "Girl"));
 
 
+        let paragraph = "Full-stack web development involves building both the front-end and back-end of a web application. The front-end, or client side, focuses on user experience and is developed using technologies like HTML, CSS, and a JavaScript frameworks such as React or Angular. The back-end, or server side, handles data processing, authentication, and business logic using languages like Node.js, Python, or Java. Full-stack developers also work with databases like MySQL or MongoDB and manage server deployment using cloud platforms like AWS or Firebase. Mastering full-stack development allows developers to create complete, functional applications from start to finish."
+
+        let acounter = 0
+        let theCounter = 0
+        let anCounter = 0
+
+        let wordss = paragraph.split(" ")
+        for (const wrd of wordss) {
+            if (wrd ===  'a') {
+                acounter++
+            }
+        }
+
+        console.log("A", acounter);
+        let an = paragraph.split("an").length - 1
+        console.log("an", an);
     </script>
 </body>
 
