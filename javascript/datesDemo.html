@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <script>
+        //Wprking on Date data type
+        let n = 43
+        let name = "Ashu"
+        let friends = []
+        let stud = {}
+
+
+        let today = new Date()
+        console.log("DATE", today);
+        console.log(typeof (today));
+
+        console.log(today.getDate());
+        console.log(today.getMonth());
+        console.log(today.getFullYear());
+
+        console.log(today.getDay());
+
+        console.log(today.getHours());
+        console.log(today.getMinutes());
+        console.log(today.getSeconds());
+
+        console.log(today.getTime());
+
+
+        let birthDate = new Date("1993-07-16")
+        let birthDate2 = new Date("1995-05-23")
+        console.log(birthDate);
+
+        console.log("D1", birthDate.getTime());
+        console.log("D2", birthDate2.getTime());
+
+        console.log(birthDate > birthDate2);
+
+
+        const orders = [
+            { orderNo: "ORD2001", customerName: "Rajesh Kumar", date: "2025-06-05", amount: 799, status: "Delivered" },
+            { orderNo: "ORD2002", customerName: "Priya Sharma", date: "2025-06-12", amount: 650, status: "Pending" },
+            { orderNo: "ORD2003", customerName: "Amit Singh", date: "2025-06-20", amount: 899, status: "Cancelled" },
+            { orderNo: "ORD2004", customerName: "Neha Verma", date: "2025-07-03", amount: 1299, status: "Delivered" },
+            { orderNo: "ORD2005", customerName: "Vikram Patel", date: "2025-07-09", amount: 450, status: "Pending" },
+            { orderNo: "ORD2006", customerName: "Suman Joshi", date: "2025-07-15", amount: 999, status: "Delivered" },
+            { orderNo: "ORD2007", customerName: "Ankit Yadav", date: "2025-07-22", amount: 1199, status: "Cancelled" },
+            { orderNo: "ORD2008", customerName: "Kiran Gupta", date: "2025-08-01", amount: 750, status: "Delivered" },
+            { orderNo: "ORD2009", customerName: "Pooja Reddy", date: "2025-08-08", amount: 599, status: "Pending" },
+            { orderNo: "ORD2010", customerName: "Rohit Mehta", date: "2025-08-14", amount: 1299, status: "Delivered" },
+            { orderNo: "ORD2011", customerName: "Swati Tiwari", date: "2025-06-07", amount: 799, status: "Cancelled" },
+            { orderNo: "ORD2012", customerName: "Tarun Kapoor", date: "2025-06-18", amount: 1150, status: "Delivered" },
+            { orderNo: "ORD2013", customerName: "Deepika Malhotra", date: "2025-07-02", amount: 899, status: "Pending" },
+            { orderNo: "ORD2014", customerName: "Kunal Bansal", date: "2025-07-16", amount: 650, status: "Delivered" },
+            { orderNo: "ORD2015", customerName: "Meera Nair", date: "2025-07-29", amount: 1350, status: "Cancelled" },
+            { orderNo: "ORD2016", customerName: "Aditya Ghosh", date: "2025-08-05", amount: 999, status: "Delivered" },
+            { orderNo: "ORD2017", customerName: "Nidhi Saxena", date: "2025-08-13", amount: 899, status: "Pending" },
+            { orderNo: "ORD2018", customerName: "Suresh Menon", date: "2025-08-20", amount: 550, status: "Delivered" },
+            { orderNo: "ORD2019", customerName: "Rekha Iyer", date: "2025-06-25", amount: 1199, status: "Pending" },
+            { orderNo: "ORD2020", customerName: "Harsh Vardhan", date: "2025-07-05", amount: 1350, status: "Delivered" }
+        ];
+
+        console.log(orders);
+    </script>
+</body>
+
+</html>
