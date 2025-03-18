@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <script>
+        //CallBack Functions with setTimeout() and setInterval()
+
+        // setTimeout(() =>{
+        //     console.log("Hello...");
+        // }, 4000);
+
+        // setTimeout(() =>{
+        //     console.log("Hello...Hi...");
+        // }, 7000);
+
+
+        // let intervalId = setInterval(() => {
+        //     console.log("hi....");
+        // }, 1000);
+
+        // let intervalId2 = setInterval(() => {
+        //     console.log("hi....Hello");
+        // }, 2000);
+
+        // setTimeout(() => {
+        //     clearInterval(intervalId)
+        //     clearInterval(intervalId2)
+        // }, 10000);
+
+
+        // function add(a, b) { }
+
+        // add(32, 54)
+
+        // add(() => { }, () => { })
+
+
+        function step1(goTonext) {
+            setTimeout(() => {
+                console.log("Step 1 Done");
+                goTonext()
+            }, 2000)
+        }
+
+        function step2(goToNext) {
+            setTimeout(() => {
+                console.log("Step 2 Done");
+                goToNext()
+            }, 2000)
+        }
+
+        function step3() {
+            setTimeout(() => {
+                console.log("Step 3 Done");
+            }, 2000);
+        }
+
+        step1(() => {
+            step2(() => {
+                step3()
+            })
+        })
+    </script>
+</body>
+
+</html>
