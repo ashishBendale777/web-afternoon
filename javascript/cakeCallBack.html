@@ -1,16 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 
     <script>
         //Impliment Cake making using call back function
-        
+
+        //Step 1 collectIngredients
+        function collectIngredients(ingredients, nextStep) {
+            let cakeInfo = {}
+            cakeInfo.ingredients = ingredients
+            console.log("Collecting ingredients....");
+            setTimeout(() => {
+                console.log("Ingredients Collected");
+                console.log(cakeInfo);
+                nextStep(cakeInfo)
+            }, 1000);
+        }
+
+        //2 betterMixing
+        function betterMixing(cakeData, cakeFlavour, nextStep) {
+            console.log("Mixing started.....");
+            cakeData.flavor = cakeFlavour
+
+            setTimeout(() => {
+                console.log("Mixing Done");
+                nextStep(cakeData)
+            }, 1000);
+        }
+
+        //3 chooseShape
+        function chooseShape(cakeData, shape, nextStep) {
+            console.log("Shape choosing.....");
+            cakeData.cakeshape = shape
+            setTimeout(() => {
+                console.log("Shape Choosed");
+                nextStep(cakeData)
+            }, 1000);
+        }
+        //4 bakingProcess
+        function bakingProcess(cakeData, temprature, nextStep) {
+            console.log("Baking started.....on" + temprature + " deg");
+            setTimeout(() => {
+                console.log("Baking Done");
+                nextStep(cakeData)
+            }, 5000);
+        }
+
+        //5 cakeDecotation
+        function cakeDecotation(cakeData, color) {
+            console.log("Decorating.......");
+            cakeData.color = color
+            setTimeout(() => {
+                console.log("Cake Decorated! Ready to Cut");
+                console.log("FINAL CAKE", cakeData);
+            }, 2000);
+        }
+
+
+        //start cake making process
+        collectIngredients(["cherry", "baking powder", "sugar", "wheet flor"],
+            (cakeData) => {
+                betterMixing(cakeData, "chocolate", (cakeData2) => {
+                    console.log("DATA", cakeData2);
+                    chooseShape(cakeData2,"Heart",(cakeData3) => {
+                        bakingProcess(cakeData3,"160",(cakeData4) => {
+                            cakeDecotation(cakeData4,"Red")
+                        })
+                    })
+                })
+            })
     </script>
 </body>
+
 </html>
