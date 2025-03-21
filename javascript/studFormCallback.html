@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Student addmission process using callback function
+
+        let studentList = []
+        //step 1 fillForm
+        let fillForm = (stdName, stdAddress, stdMob, course, next) => {
+            let studentData = {}
+            studentData = { stdName, stdAddress, course, stdMob }
+            setTimeout(() => {
+                console.log("Form Fill Done");
+                next(studentData)
+
+            }, 1000)
+        }
+
+        //step 2 attachDocuments
+        let attachDocuments = (student, documentList, next) => {
+            student.documents = documentList
+            setTimeout(() => {
+                console.log("Docs Collected");
+                next(student)
+
+            }, 1000)
+        }
+
+        //step 3 printChallan
+        let printChallan = (student, addmissionFees, next) => {
+            student.fees = addmissionFees
+            setTimeout(() => {
+                console.log("Challan Printed make paymnets..");
+                next(student)
+
+            }, 1000)
+        }
+
+        //step 4 doPayments
+        let doPayments = (stud, payMode, payDate, next) => {
+            stud.payMode = payMode
+            stud.payDate = payDate
+            setTimeout(() => {
+                console.log("Payment Done Sublit form at Office.");
+                next(stud)
+
+            }, 1000)
+        }
+
+        //steo 5 submitApplicationForm
+        let submitApplicationForm = (stud, next) => {
+            stud.isAddmissionDone = true
+            setTimeout(() => {
+                console.log("Ur Admission is done.");
+                next(stud)
+
+            }, 1000)
+        }
+
+
+
+        //start addmission
+        fillForm("AShish", "BSL", 34534535, "MCA", (std1) => {
+            attachDocuments(std1, ["LC", "Aadhar", "Marksheet"], (std2) => {
+                printChallan(std2, 23000, (std3) => {
+                    doPayments(std3, "Online", new Date(), (std4) => {
+                        submitApplicationForm(std4, (std5) => {
+                            console.log("DATA", std5);
+                            studentList.push(std5)
+                            console.log("ist", studentList);
+                        })
+                    })
+                })
+            })
+        })
+
+
+
+        fillForm("Prathmesh", "Jal", 34534535, "BCA", (std1) => {
+            attachDocuments(std1, ["LC", "Aadhar", "Marksheet"], (std2) => {
+                printChallan(std2, 23000, (std3) => {
+                    doPayments(std3, "Online", new Date(), (std4) => {
+                        submitApplicationForm(std4, (std5) => {
+                            console.log("DATA", std5);
+                            studentList.push(std5)
+                            console.log("LIST", studentList);
+                        })
+                    })
+                })
+            })
+        })
+
+    </script>
+</body>
+
+</html>
