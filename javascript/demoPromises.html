@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Promises Explained
+
+        //create a promise
+        let myPromise = new Promise((resolve, reject) => {
+            let age = 12
+            console.log("Cheking.....");
+            setTimeout(() => {
+                if (age > 18) {
+                //calling a resolve function
+                resolve("Allwed")
+            }else{
+                //calling a reject function
+                reject(new Error("Not Allowed"))
+            }    
+            }, 2000);
+            
+        })
+
+
+        //handling a promise
+        myPromise
+            .then((result) => {
+                console.log(result);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+
+
+    </script>
+
+
+</body>
+
+</html>

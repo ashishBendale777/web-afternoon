@@ -1,0 +1,6 @@
+//Promises 
+
+//Promise Steges/State
+Pending 
+Fullfill -- resolve()
+Reject -- reject()
