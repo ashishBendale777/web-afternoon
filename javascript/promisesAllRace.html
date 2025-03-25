@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Step 1: fillForm
+        let fillForm = (stdName, stdAddress, stdMob, course) => {
+            let studentData = {}
+            let formPromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (!stdName) {
+                        reject(new Error("Student Name is Mandatory"))
+                    } else {
+                        studentData = { stdName, stdAddress, stdMob, course }
+                        console.log("✅ Form Fill Done");
+                        resolve(studentData)
+                    }
+                }, 1000)
+            })
+            return formPromise
+        }
+
+        // Step 2: attachDocuments
+        let attachDocuments = (student, documentList) => {
+            let docsPromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (documentList.length === 0) {
+                        reject(new Error("❌ Please Provide valid docs"))
+                    } else {
+                        student.documents = documentList
+                        console.log("📄 Docs Collected");
+                        resolve(student)
+                    }
+                }, 2000)
+            })
+            return docsPromise
+        }
+
+        // Step 3: paymentProcess
+        let paymentProcess = (student) => {
+            let paymentPromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (!student.documents) {
+                        reject(new Error("❌ Payment Failed: Docs Missing"))
+                    } else {
+                        console.log("💸 Payment Successful");
+                        resolve("Admission Complete!")
+                    }
+                }, 1500)
+            })
+            return paymentPromise
+        }
+
+        // Using Promise.all()
+        // fillForm("Ashish", "Jalgaon", 5345353, "MCA")
+        //     .then((result) => {
+        //         return attachDocuments(result, ["Aadhar", "LC"])
+        //     }).then((result2) => {
+        //         return Promise.all([
+        //             paymentProcess(result2)
+        //         ])
+        //     })
+        //     .then((results) => {
+        //         console.log("🎉 Admission Done Using Promise.all()");
+        //         console.log(results[0]);
+        //     })
+        //     .catch((error) => {
+        //         console.log(error.message);
+        //     })
+
+        // // Using Promise.race()
+        fillForm("Ashish", "Jalgaon", 5345353, "MCA")
+            .then((result) => {
+                return Promise.race([
+                    attachDocuments(result, ["Aadhar", "LC"]),
+                    paymentProcess(result)
+                ])
+            })
+            .then((firstResolved) => {
+                console.log("🚀 First Promise Resolved Using Promise.race()");
+                console.log(firstResolved);
+            })
+            .catch((error) => {
+                console.log(error.message);
+            })
+
+
+    </script>
+</body>
+
+</html>
