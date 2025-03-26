@@ -78,7 +78,7 @@
         // // Using Promise.race()
         fillForm("Ashish", "Jalgaon", 5345353, "MCA")
             .then((result) => {
-                return Promise.race([
+                return Promise.race( [
                     attachDocuments(result, ["Aadhar", "LC"]),
                     paymentProcess(result)
                 ])

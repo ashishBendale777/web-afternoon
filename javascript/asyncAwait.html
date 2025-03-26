@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //cakeprocess step1 ingredientcollection
+        let cakeingredient = (ingredients) => {
+            let cakeinformation = {}
+            let ingredientpromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("Cake ingredients collected!!");
+                    cakeinformation.ingredients = ingredients
+                    resolve(cakeinformation)
+                }, 2000);
+            })
+            return ingredientpromise
+        }
+
+        // Step 2 bettermixing
+        let bettermixer = (cakedata, cakeflavour) => {
+            let bettermixpromise = new Promise((resolve, reject) => {
+                console.log("adding ingredients.....")
+                setTimeout(() => {
+                    console.log("better mixed!!")
+                    cakedata.flavour = cakeflavour
+                    resolve(cakedata)
+                }, 3000);
+            })
+            return bettermixpromise
+        }
+
+        // Step 3 Choose shape
+        let shapechoose = (cakedata, shape) => {
+            let shapepromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("Shape chosen!!");
+                    cakedata.cakeshape = shape
+                    resolve(cakedata);
+                }, 4000);
+            })
+            return shapepromise
+        }
+
+        // Step 4: Bake the cake
+        let bakingcake = (cakedata, temperature) => {
+            let bakingpromise = new Promise((resolve, reject) => {
+                console.log("cake baking starting....on" + temperature + "deg")
+                setTimeout(() => {
+                    if (temperature > 60) {
+                        reject(new Error("temperature is high"))
+                    } else {
+                        console.log("Cake is baked!!");
+                        resolve(cakedata);
+                    }
+                }, 5000);
+            })
+            return bakingpromise
+        }
+
+        // Step 5: Decorate the cake
+        let cakedecoration = (cakedata, color) => {
+            console.log("decoration starting.....")
+            let cakedecpromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("Cake decorated!!");
+                    cakedata.color = color
+                    resolve(cakedata)
+
+                }, 6000);
+            })
+            return cakedecpromise
+        }
+
+
+        //handling a promises using async await
+        async function startCaakeMakingProcess() {
+            try {
+                let res1 = await cakeingredient(["cherry", "wheet floor", "baking powder"])
+                let res2 = await bettermixer(res1, "chocolate")
+                let res3 = await shapechoose(res2, "heart")
+                let res4 = await bakingcake(res3, 65)
+                let res5 = await cakedecoration(res4, "red")
+                console.log(res5);
+            } catch (error) {
+                console.log(error);
+            }finally{
+                console.log("PROCESS COMPLRTE");
+            }
+        }
+
+
+        //calling a funcrtion
+        startCaakeMakingProcess()
+    </script>
+</body>
+
+</html>
