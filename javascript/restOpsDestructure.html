@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //rest operators and array-objrct destructuring
+
+        let friends = ["Ash", "Dhiraj", "Bhushan", "Sarvesh", "Sam"]
+
+        let newFriends = ["Amol", "Pawan", ...friends]
+        console.log(newFriends);
+
+        let [f1, f2, f3, ...others] = newFriends
+        console.log(f2);
+        console.log(f3);
+        console.log(others);
+
+        let stud = {
+            stdName: "AShish",
+            stdCourse: "MCA",
+            stdAge: 23
+        }
+
+        stud.stdMobNo = 36356436
+        let nStd = { stdMob: 325434, ...stud, srdAadhar: 5353553535 }
+        console.log(nStd);
+
+        console.log(nStd.srdAadhar);
+
+        let { stdName, stdCourse, ...other } = nStd
+        console.log(other);
+        console.log(stdName);
+
+
+
+        let addition = (n1, ...nums) => {
+            console.log(n1);
+            console.log(nums);
+        }
+
+        addition(4, 23, 54, 123, 54, 234, 23, 54, 64)
+    </script>
+</body>
+
+</html>
