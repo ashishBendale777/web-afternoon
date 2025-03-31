@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="inAmount" placeholder="Enter Amout">
+    <button id="btnCheckBalance">Check Balance</button>
+    <button id="btnWithdrawal">Withdraw</button>
+    <button id="btnDeposite">Deposite</button>
+
+    <script type="module">
+        import { checkBalance, withodrawAmt, depositeAmt } from '../bankSystem.js'
+
+        let inAmount = document.getElementById("inAmount")
+        let btnCheckBalance = document.getElementById("btnCheckBalance")
+        let btnWithdrawal = document.getElementById("btnWithdrawal")
+        let btnDeposite = document.getElementById("btnDeposite")
+
+
+        btnCheckBalance.addEventListener("click", () => {
+            alert("Hi")
+            checkBalance()
+        })
+
+        btnDeposite.addEventListener("click", () => {
+            let amount = inAmount.value
+            // console.log(typeof (amount));
+            depositeAmt(Number(amount))
+            inAmount.value = ""
+        })
+
+
+        
+        btnWithdrawal.addEventListener("click", () => {
+            let amount = inAmount.value
+            // console.log(typeof (amount));
+            withodrawAmt(Number(amount))
+            inAmount.value = ""
+
+        })
+    </script>
+</body>
+
+</html>
