@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function submitForm(event) {
+            //maintain default state of form
+            event.preventDefault()
+
+            let fData = new FormData(event.target)
+            console.log("FDATA", fData);
+            let formSubmitData = Object.fromEntries(fData.entries())
+            console.log("DATA", formSubmitData);
+
+
+            let hName = document.getElementById("sName")
+            let hCourse = document.getElementById("sCourse")
+            let hGender = document.getElementById("sGender")
+
+            hName.innerText = "Name:" + formSubmitData.first_name + " " + formSubmitData.last_name
+            hCourse.innerText = "Course:" + formSubmitData.course
+            hGender.innerText = "Gender:" + formSubmitData.gender
+
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Student Registration Form</h2>
+    <form onsubmit="submitForm(event)" id="studentForm">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other" required>
+        <label for="other">Other</label>
+        <br><br>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="">Select Course</option>
+            <option value="computer_science">Computer Science</option>
+            <option value="electronics">Electronics</option>
+            <option value="mechanical">Mechanical</option>
+            <option value="civil">Civil</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <div>
+        <h5 id="sName">Name</h5>
+        <h5 id="sCourse">Course</h5>
+        <h5 id="sGender">Gender</h5>
+    </div>
+</body>
+
+</html>
