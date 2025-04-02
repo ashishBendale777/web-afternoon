@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table id="tblEmployee">
+        <tr>
+            <th>ID</th>
+            <th>NAMME</th>
+            <th>Address</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>City</th>
+            <th>State</th>
+        </tr>
+    </table>
+
+    <script>
+        const employees = [
+            {
+                id: 1,
+                name: "Amit Sharma",
+                salary: 75000,
+                department: "IT",
+                address: "A-123, MG Road",
+                city: "Mumbai",
+                state: "Maharashtra"
+            },
+            {
+                id: 2,
+                name: "Priya Verma",
+                salary: 68000,
+                department: "HR",
+                address: "B-456, Park Street",
+                city: "Delhi",
+                state: "Delhi"
+            },
+            {
+                id: 3,
+                name: "Rajesh Gupta",
+                salary: 72000,
+                department: "Finance",
+                address: "C-789, Baner Road",
+                city: "Pune",
+                state: "Maharashtra"
+            },
+            {
+                id: 4,
+                name: "Neha Dubey",
+                salary: 65000,
+                department: "Marketing",
+                address: "D-321, Indiranagar",
+                city: "Bangalore",
+                state: "Karnataka"
+            },
+            {
+                id: 5,
+                name: "Vikram Singh",
+                salary: 78000,
+                department: "IT",
+                address: "E-654, Banjara Hills",
+                city: "Hyderabad",
+                state: "Telangana"
+            },
+            {
+                id: 6,
+                name: "Anjali Nair",
+                salary: 70000,
+                department: "HR",
+                address: "F-987, MG Road",
+                city: "Kochi",
+                state: "Kerala"
+            },
+            {
+                id: 7,
+                name: "Suresh Patil",
+                salary: 73000,
+                department: "Finance",
+                address: "G-111, JM Road",
+                city: "Pune",
+                state: "Maharashtra"
+            },
+            {
+                id: 8,
+                name: "Kavita Joshi",
+                salary: 67000,
+                department: "Marketing",
+                address: "H-222, Andheri East",
+                city: "Mumbai",
+                state: "Maharashtra"
+            },
+            {
+                id: 9,
+                name: "Rohit Saxena",
+                salary: 80000,
+                department: "IT",
+                address: "I-333, Whitefield",
+                city: "Bangalore",
+                state: "Karnataka"
+            },
+            {
+                id: 10,
+                name: "Meera Iyer",
+                salary: 69000,
+                department: "HR",
+                address: "J-444, BTM Layout",
+                city: "Bangalore",
+                state: "Karnataka"
+            },
+            {
+                id: 11,
+                name: "Arjun Reddy",
+                salary: 75000,
+                department: "Finance",
+                address: "K-555, Jubilee Hills",
+                city: "Hyderabad",
+                state: "Telangana"
+            },
+            {
+                id: 12,
+                name: "Sneha Desai",
+                salary: 68000,
+                department: "Marketing",
+                address: "L-666, Vastrapur",
+                city: "Ahmedabad",
+                state: "Gujarat"
+            },
+            {
+                id: 13,
+                name: "Manish Tiwari",
+                salary: 71000,
+                department: "IT",
+                address: "M-777, Rajaji Nagar",
+                city: "Bangalore",
+                state: "Karnataka"
+            },
+            {
+                id: 14,
+                name: "Deepika Rao",
+                salary: 67000,
+                department: "HR",
+                address: "N-888, Connaught Place",
+                city: "Delhi",
+                state: "Delhi"
+            },
+            {
+                id: 15,
+                name: "Harsh Mehta",
+                salary: 73000,
+                department: "Finance",
+                address: "O-999, Navrangpura",
+                city: "Ahmedabad",
+                state: "Gujarat"
+            },
+            {
+                id: 16,
+                name: "Pooja Kulkarni",
+                salary: 66000,
+                department: "Marketing",
+                address: "P-101, FC Road",
+                city: "Pune",
+                state: "Maharashtra"
+            },
+            {
+                id: 17,
+                name: "Nitin Yadav",
+                salary: 78000,
+                department: "IT",
+                address: "Q-202, Cyber Hub",
+                city: "Gurgaon",
+                state: "Haryana"
+            },
+            {
+                id: 18,
+                name: "Swati Choudhary",
+                salary: 69000,
+                department: "HR",
+                address: "R-303, Hitech City",
+                city: "Hyderabad",
+                state: "Telangana"
+            },
+            {
+                id: 19,
+                name: "Karan Malhotra",
+                salary: 72000,
+                department: "Finance",
+                address: "S-404, Salt Lake",
+                city: "Kolkata",
+                state: "West Bengal"
+            },
+            {
+                id: 20,
+                name: "Simran Kaur",
+                salary: 67000,
+                department: "Marketing",
+                address: "T-505, Sector 62",
+                city: "Noida",
+                state: "Uttar Pradesh"
+            }
+        ];
+
+        let tblEmployee = document.getElementById("tblEmployee")
+
+        for (let emp of employees) {
+            let tr = document.createElement("tr")
+            tr.innerHTML = `<td>${emp.id}</td>
+            <td>${emp.name}</td>
+            <td>${emp.address}</td>
+            <td>${emp.salary}</td>
+            <td>${emp.department}</td>
+            <td>${emp.city}</td>
+            <td>${emp.state}</td>`
+
+            tblEmployee.appendChild(tr)
+        }
+
+    </script>
+</body>
+
+</html>

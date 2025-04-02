@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+    <script>
+        let mBody = document.body
+        mBody.style.backgroundColor = "red"
+        mBody.style.height = "100vh"
+        mBody.style.width = "100%"
+        mBody.style.display = "flex"
+        
+        let rDiv=document.createElement("div")
+        let lDiv=document.createElement("div")
+
+        rDiv.innerHTML = `<h1>Hi Right</h1>`
+        lDiv.innerHTML = `<h1>H     i Left</h1>`
+
+        rDiv.style.width = "50%"
+        lDiv.style.width = "50%"
+
+        rDiv.style.textAlign = "center"
+        lDiv.style.textAlign = "center"
+        
+        mBody.appendChild(lDiv)     
+        mBody.appendChild(rDiv)
+    </script>
+</body>
+
+</html>
